@@ -9,13 +9,27 @@ import File from '../../components/File/File';
 
 
 class FolderList extends Component {
-    render() {
-        const { folders } = this.props;
+    state = {
+        open: false
+    }
+   
 
-        const renderFileOrFolder = folders.map(contents => (
-            contents.type === 'folder' ? <Folder contents={contents}/> : <File contents={contents} />
-        ));
+    
+
+    clickHandler(event, open, fileName) {
+        event.preventDefault();
+        this.setState({open: !open})
+
         
+    };
+
+    render() {
+        const { data } = this.props;
+
+        const renderFileOrFolder = data.map(contents => (
+            contents.type === 'folder' ? <Folder key={contents.name} contents={contents}/> : <File key={contents.name} contents={contents} />
+        ));
+
         return (
             <div>
                 {renderFileOrFolder}
@@ -25,18 +39,18 @@ class FolderList extends Component {
 };
 
 const mapStateToProps = state => ({
-    folders: state.folderData,
+    data: state.folderData,
 })
 
 FolderList.propTypes = {
-    folders: PropTypes.arrayOf(PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.shape({
         ...folderDataType,
         files: PropTypes.arrayOf(folderDataType)
     }))
 };
 
 FolderList.defaultProps = {
-    folders: []
+    data: []
 };
 
 export default connect(mapStateToProps, null)(FolderList);
