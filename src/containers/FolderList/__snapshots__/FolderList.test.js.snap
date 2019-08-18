@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`folderList should render 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      Employee Handbook
+    </p>
+    <p>
+      Public Holiday policy
+    </p>
+    <p>
+      Expenses
+    </p>
+    <p>
+      Cost centres
+    </p>
+    <p>
+      Misc
+    </p>
+  </div>
+</DocumentFragment>
+`;

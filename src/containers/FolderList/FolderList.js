@@ -26,10 +26,10 @@ FolderList.propTypes = {
         ...folderType,
         files: PropTypes.arrayOf(folderType)
     }))
-}
+};
 
 FolderList.defaultProps = {
-    folders: [];
-}
+    folders: []
+};
 
 export default connect(mapStateToProps, null)(FolderList);
