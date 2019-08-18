@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import folderDataType from '../../types/types';
+import { folderDataType } from '../../types/types';
 
 const folder = ({ contents }) => (
     <div>
