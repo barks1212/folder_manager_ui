@@ -11,7 +11,6 @@
 
 ## Summary
 
-**WORK IN PROGRESS**
 
 Treated this as an exercise to get used to React Testing Library - starting to get sold a little on it now but made TDD quite slow.
 Wanted to use useContext and useReducer hooks but discovered early on that you can't dynamically create contexts in a map which shot down my initial approach, reverted to redux and some local state.
