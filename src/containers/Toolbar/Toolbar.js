@@ -7,6 +7,8 @@ import * as actionTypes from '../../store/actions';
 
 class Toolbar extends Component {
     render() {
+        const { sortFiles } = this.props;
+
         return (
             <header className={classes.Toolbar}>
                 <select className={classes.Select} placeholder="sort by">
