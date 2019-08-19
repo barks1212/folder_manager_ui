@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`file should render 1`] = `
+<DocumentFragment>
+  <div>
+    this is a file
+  </div>
+</DocumentFragment>
+`;
