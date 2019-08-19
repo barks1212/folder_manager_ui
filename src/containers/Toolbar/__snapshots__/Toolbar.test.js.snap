@@ -5,7 +5,28 @@ exports[`Toolbar should render 1`] = `
   <header
     class="Toolbar"
   >
-    some stuff
+    <select
+      class="Select"
+      placeholder="sort by"
+    >
+      <option
+        disabled=""
+        hidden=""
+        value=""
+      >
+        Sort by
+      </option>
+      <option
+        value="name"
+      >
+        Name
+      </option>
+      <option
+        value="date"
+      >
+        Date
+      </option>
+    </select>
   </header>
 </DocumentFragment>
 `;
