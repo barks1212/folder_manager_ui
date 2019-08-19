@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import { folderDataType } from '../../types/types';
@@ -22,7 +22,7 @@ class Folder extends Component {
         const chevron = open ? <i className={`fa fa-chevron-up ${classes.Chev}`}></i> : <i className={`fa fa-chevron-down ${classes.Chev}`}></i>
 
         return (
-            <div className={classes.Folder} onClick={(e) => this.openFolderHandler(e)}>
+            <div data-testid="folderWrapper" className={classes.Folder} onClick={(e) => this.openFolderHandler(e)}>
                 <ul>
                     <li className={classes.Name}>{contents.name}</li>
                     <li>{chevron}</li>
