@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
                 folderData: [...sortedFiles]
             };
         case actionTypes.FILTER_FILES:
-            const filteredFiles = folderData.filter(data => data.name.toLowerCase().includes(action.input));
+            const filteredFiles = folderData.filter(data => data.name.toLowerCase().includes(action.input.toLowerCase()));
             return {
                 ...state,
                 folderData: [...filteredFiles],

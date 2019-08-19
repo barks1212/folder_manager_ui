@@ -7,7 +7,7 @@ import classes from './Input.module.css';
 const input = ({ filterFiles }) => (
     <div className={classes.InputWrapper}>
         <i className="fa fa-search" />
-        <input placeholder='Filename...' onChange={filterFiles} />
+        <input placeholder='Filename...' onChange={(e) => filterFiles(e.target.value)} />
     </div>
 );
 

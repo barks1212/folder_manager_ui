@@ -40,6 +40,7 @@ exports[`App should render 1`] = `
   >
     <div
       class="FolderList"
+      data-testid="folderList"
     >
       <div
         data-testid="file"

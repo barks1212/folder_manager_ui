@@ -55,7 +55,7 @@ describe('sort functionality', () => {
 
 describe('filter', () => {
     it('should filter files and folders by name', () => {
-        const { container, getAllByTestId } = render (
+        const { container, getByTestId } = render (
             <Provider store={store}>
                 <App />
             </Provider>
@@ -64,15 +64,15 @@ describe('filter', () => {
         const input = container.querySelector('input');
 
         fireEvent.change(input, {target: {value: 'Employee'}});
-        const filteredFileName = getAllByTestId('file').firstElementChild.firstChild.childNodes[1].textContent;
-        const folderList = getAllByTestId('folderList').childNodes;
+        const filteredFileName = getByTestId('file').firstElementChild.firstChild.childNodes[1].textContent;
+        const folderList = getByTestId('folderList').firstElementChild.childNodes
 
         expect(filteredFileName).toEqual('Employee Handbook');
         expect(folderList).toHaveLength(1);
     });
 
     it('should return no data when no files of that name exist', () => {
-        const { container, getAllByTestId } = render (
+        const { container, getByTestId } = render (
             <Provider store={store}>
                 <App />
             </Provider>
@@ -81,13 +81,13 @@ describe('filter', () => {
         const input = container.querySelector('input');
 
         fireEvent.change(input, {target: {value: 'test1234'}});
-        const folderList = getAllByTestId('folderList').childNodes;
+        const folderList = getByTestId('folderList').childNodes
         
         expect(folderList).toHaveLength(0);
     });
 
     it('should revert the filters when input value is emptied', () => {
-        const { container, getAllByTestId } = render (
+        const { container, getByTestId } = render (
             <Provider store={store}>
                 <App />
             </Provider>
@@ -98,7 +98,7 @@ describe('filter', () => {
         fireEvent.change(input, {target: {value: 'testtesttest'}});
         fireEvent.change(input, {target: {value: ''}});
 
-        const folderList = getAllByTestId('folderList').childNodes;
+        const folderList = getByTestId('folderList').childNodes
 
         expect(folderList).toHaveLength(5);
     });

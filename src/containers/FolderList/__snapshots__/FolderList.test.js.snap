@@ -4,6 +4,7 @@ exports[`folderList should render 1`] = `
 <DocumentFragment>
   <div
     class="FolderList"
+    data-testid="folderList"
   >
     <div
       data-testid="file"

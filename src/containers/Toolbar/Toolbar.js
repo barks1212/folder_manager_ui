@@ -11,12 +11,12 @@ import {noop} from '../../utils/utils';
 
 class Toolbar extends Component {
     render() {
-        const { setSort } = this.props;
+        const { setSort, filterFiles } = this.props;
 
         return (
             <header className={classes.Toolbar}>
                 <Dropdown setSort={setSort} />
-                <Input filterFiles={noop} />
+                <Input filterFiles={filterFiles} />
             </header>
         );
     };
@@ -24,7 +24,8 @@ class Toolbar extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    setSort: sort => dispatch({type: actionTypes.SET_SORT, sort: sort})
+    setSort: sort => dispatch({type: actionTypes.SET_SORT, sort: sort}),
+    filterFiles: input => dispatch({type: actionTypes.FILTER_FILES, input: input})
 });
 
 Toolbar.propTypes = {
