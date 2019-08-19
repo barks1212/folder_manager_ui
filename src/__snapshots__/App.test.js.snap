@@ -22,7 +22,7 @@ exports[`App should render 1`] = `
         Name
       </option>
       <option
-        value="date"
+        value="added"
       >
         Date
       </option>

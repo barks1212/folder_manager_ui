@@ -38,16 +38,16 @@ describe('sort functionality', () => {
         expect(firstFolder).toEqual('Expenses');
     });
 
-    it('should sort by date when date is selected', () => {
+    it.only('should sort by date when date is selected', () => {
         const { container, getAllByTestId } = render (
             <Provider store={store}>
                 <App />
             </Provider>);
             
         const dropdown = container.querySelector('select');
-        fireEvent.change(dropdown, {target: {value:'date'}});
-
+        fireEvent.change(dropdown, {target: {value:'added'}});
         const firstFile = getAllByTestId('file')[0].firstElementChild.firstChild.childNodes[2].textContent;
+        
 
         expect(firstFile).toEqual('2016-08-12');
     });
