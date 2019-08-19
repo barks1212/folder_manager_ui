@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import isEqual from 'lodoash.isequal';
 
 import { folderDataType } from '../../types/types';
 import classes from './FolderList.module.css';
@@ -10,19 +11,6 @@ import File from '../../components/File/File';
 
 
 class FolderList extends Component {
-    state = {
-        open: false
-    }
-   
-
-    
-
-    clickHandler(event, open, fileName) {
-        event.preventDefault();
-        this.setState({open: !open})
-
-        
-    };
 
     render() {
         const { data } = this.props;
