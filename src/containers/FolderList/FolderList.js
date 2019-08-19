@@ -36,7 +36,7 @@ class FolderList extends Component {
         ));
 
         return (
-            <div className={classes.FolderList}>
+            <div data-testid="folderList" className={classes.FolderList}>
                 {renderFileOrFolder}
             </div>
         );
