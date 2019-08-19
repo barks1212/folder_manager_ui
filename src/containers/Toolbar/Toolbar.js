@@ -16,7 +16,7 @@ class Toolbar extends Component {
                 <select className={classes.Select} defaultValue="Sort By" placeholder="sort by" onChange={(e) => setSort(e.target.value)}>
                     <option value="Sort By" disabled>Sort by</option>
                     <option value="name">Name</option>
-                    <option value="date">Date</option>
+                    <option value="added">Date</option>
                 </select>
             </header>
         );

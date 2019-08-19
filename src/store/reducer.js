@@ -14,31 +14,12 @@ const reducer = (state = initialState, action) => {
                     sort: action.sort
                 };
         case actionTypes.SORT_FILES:
-            let sortedState = [];
-            if (action.sort === 'name') {
-                sortedState = folderData.sort((a, b) => {
-                    if (a.name < b.name) return -1;
-                    if (a.name > b.name) return 1;
-                    return 0;
-                });
-                return {
-                    ...state,
-                    folderData: [...sortedState]
-                };
-            };
-            if (action.sort === 'date') {
-                sortedState = folderData.sort((a, b) => {
-                    if (a.added < b.added) return -1;
-                    if (a.added > b.added) return 1;
-                    if (!a.added && !b.added) return 0;
-                    return 0;
-            });
+            const sortedFiles = folderData.sort((a, b) => (a[action.sort] < b[action.sort] ? -1 : 1));
+
             return {
                 ...state,
-                folderData: [...sortedState]
+                folderData: [...sortedFiles]
             };
-        };
-            break;
         default:
             return state;
     };
