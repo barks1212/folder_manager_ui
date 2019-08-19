@@ -4,7 +4,8 @@ import * as actionTypes from './actions';
 const initialState = {
     folderData,
     sort: null,
-}
+    filter: ''
+};
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -19,6 +20,13 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 folderData: [...sortedFiles]
+            };
+        case actionTypes.FILTER_FILES:
+            const filteredFiles = folderData.filter(data => data.name.toLowerCase().includes(action.input));
+            return {
+                ...state,
+                folderData: [...filteredFiles],
+                filter: action.input
             };
         default:
             return state;
