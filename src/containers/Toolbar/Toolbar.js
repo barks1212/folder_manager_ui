@@ -10,10 +10,11 @@ class Toolbar extends Component {
     render() {
         const { sortFiles } = this.props;
 
+
         return (
             <header className={classes.Toolbar}>
-                <select className={classes.Select} placeholder="sort by">
-                    <option value="" selected disabled hidden>Sort by</option>
+                <select className={classes.Select} defaultValue="Sort By" placeholder="sort by" onChange={(e) => sortFiles(e.target.value)}>
+                    <option value="Sort By" disabled>Sort by</option>
                     <option value="name">Name</option>
                     <option value="date">Date</option>
                 </select>
@@ -21,6 +22,7 @@ class Toolbar extends Component {
         );
     };
 };
+
 
 const mapDispatchToProps = dispatch => ({
     sortFiles: sort => dispatch({type: actionTypes.SORT_FILES, sort: sort})
