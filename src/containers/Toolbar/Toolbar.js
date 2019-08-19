@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import classes from './Toolbar.module.css';
 import * as actionTypes from '../../store/actions';
+import {noop} from '../../utils/utils';
 
 class Toolbar extends Component {
     render() {
@@ -24,5 +25,13 @@ class Toolbar extends Component {
 const mapDispatchToProps = dispatch => ({
     sortFiles: sort => dispatch({type: actionTypes.SORT_FILES, sort: sort})
 });
+
+Toolbar.propTypes = {
+    sortFiles: PropTypes.func
+};
+
+Toolbar.defaultProps = {
+    sortFiles: noop
+};
 
 export default connect(null, mapDispatchToProps)(Toolbar);
