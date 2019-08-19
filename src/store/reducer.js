@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SORT_FILES:
             let sortedState;
             if (action.sort === 'name') {
-                sortedState = state.folderData.sort((a, b) => {
+                sortedState = folderData.sort((a, b) => {
                     if (a.name < b.name) return -1;
                     if (a.name > b.name) return 1;
                     return 0;

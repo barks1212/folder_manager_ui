@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import isEqual from 'lodoash.isequal';
+import isEqual from 'lodash.isequal';
 
 import { folderDataType } from '../../types/types';
 import classes from './FolderList.module.css';
