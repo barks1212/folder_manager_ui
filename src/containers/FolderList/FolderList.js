@@ -5,12 +5,17 @@ import isEqual from 'lodash.isequal';
 
 import { folderDataType } from '../../types/types';
 import classes from './FolderList.module.css';
+import * as actionTypes from '../../store/actions';
 
 import Folder from '../../components/Folder/Folder';
 import File from '../../components/File/File';
 
 
 class FolderList extends Component {
+
+    componentDidUpdate() {
+            this.props.sortFiles(this.props.sort)
+    };
 
     render() {
         const { data } = this.props;
@@ -39,7 +44,12 @@ class FolderList extends Component {
 
 const mapStateToProps = state => ({
     data: state.folderData,
-})
+    sort: state.sort
+});
+
+const mapDispatchToProps = dispatch => ({
+    sortFiles: sort => dispatch({type: actionTypes.SORT_FILES, sort: sort})
+});
 
 FolderList.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
@@ -52,4 +62,4 @@ FolderList.defaultProps = {
     data: []
 };
 
-export default connect(mapStateToProps, null)(FolderList);
+export default connect(mapStateToProps, mapDispatchToProps)(FolderList);

@@ -20,7 +20,8 @@ const reducer = (state = initialState, action) => {
                     ...state,
                     sort: 'date'
                 };
-            }
+            };
+            break;
         case actionTypes.SORT_FILES:
             let sortedState;
             if (action.sort === 'name') {
@@ -31,7 +32,6 @@ const reducer = (state = initialState, action) => {
                 });
                 return {
                     ...state,
-                    sort: action.sort,
                     folderData: sortedState
                 };
             };
