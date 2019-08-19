@@ -13,8 +13,10 @@ import File from '../../components/File/File';
 
 class FolderList extends Component {
 
-    componentDidUpdate() {
-            this.props.sortFiles(this.props.sort)
+    componentDidUpdate(prevProps) {
+            if (!isEqual(prevProps.sort, this.props.sort)) {
+                this.props.sortFiles(this.props.sort)
+            };
     };
 
     render() {

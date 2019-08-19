@@ -1,6 +1,5 @@
 import folderData from '../data/folders.json';
 import * as actionTypes from './actions';
-import {compareAsc} from 'date-fns';
 
 const initialState = {
     folderData,
@@ -10,18 +9,10 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.SET_SORT:
-            if (action.sort === 'name') {
                 return {
                     ...state,
-                    sort: 'name'
-                }
-            }
-            if (action.sort === 'date') {
-                return {
-                    ...state,
-                    sort: 'date'
+                    sort: action.sort
                 };
-            };
             break;
         case actionTypes.SORT_FILES:
             let sortedState = [];
@@ -33,7 +24,7 @@ const reducer = (state = initialState, action) => {
                 });
                 return {
                     ...state,
-                    folderData: sortedState
+                    folderData: [...sortedState]
                 };
             };
             if (action.sort === 'date') {
@@ -44,7 +35,7 @@ const reducer = (state = initialState, action) => {
             });
             return {
                 ...state,
-                folderData: sortedState
+                folderData: [...sortedState]
             };
         };
             break;
