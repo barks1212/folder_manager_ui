@@ -24,13 +24,13 @@ class FolderList extends Component {
 
         const renderFileOrFolder = data.map(contents => (
             contents.type === 'folder' ?
-             <Fragment>
-                <div key={contents.name} data-testid="folder">
+             <Fragment key={contents.name}>
+                <div data-testid="folder">
                     <Folder contents={contents}/>
                 </div>
             </Fragment> :
-            <Fragment>
-                <div key={contents.name} data-testid="file">
+            <Fragment key={contents.name}>
+                <div data-testid="file">
                     <File contents={contents} />
                 </div>
             </Fragment>

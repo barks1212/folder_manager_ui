@@ -13,7 +13,6 @@ const reducer = (state = initialState, action) => {
                     ...state,
                     sort: action.sort
                 };
-            break;
         case actionTypes.SORT_FILES:
             let sortedState = [];
             if (action.sort === 'name') {
