@@ -34,7 +34,7 @@ describe('sort functionality', () => {
         const firstFile = getAllByTestId('file')[0].firstElementChild.firstChild.childNodes[1].textContent;
         const firstFolder = getAllByTestId('folder')[0].firstElementChild.firstChild.childNodes[0].textContent;
 
-        expect(firstFile).toEqual('Cost Centres');
+        expect(firstFile).toEqual('Cost centres');
         expect(firstFolder).toEqual('Expenses');
     });
 

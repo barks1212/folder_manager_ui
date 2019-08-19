@@ -11,8 +11,8 @@ exports[`Toolbar should render 1`] = `
     >
       <option
         disabled=""
-        hidden=""
-        value=""
+        selected=""
+        value="Sort By"
       >
         Sort by
       </option>
