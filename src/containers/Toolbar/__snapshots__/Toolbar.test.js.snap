@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar should render 1`] = `
+<DocumentFragment>
+  <header
+    class="Toolbar"
+  >
+    some stuff
+  </header>
+</DocumentFragment>
+`;
