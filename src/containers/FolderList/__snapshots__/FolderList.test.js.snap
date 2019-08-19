@@ -52,6 +52,7 @@ exports[`folderList should render 1`] = `
     >
       <div
         class="Folder"
+        data-testid="folderWrapper"
       >
         <ul>
           <li
@@ -66,6 +67,9 @@ exports[`folderList should render 1`] = `
           </li>
         </ul>
       </div>
+      <div
+        data-testid="subFiles"
+      />
     </div>
     <div
       data-testid="file"
@@ -93,6 +97,7 @@ exports[`folderList should render 1`] = `
     >
       <div
         class="Folder"
+        data-testid="folderWrapper"
       >
         <ul>
           <li
@@ -107,6 +112,9 @@ exports[`folderList should render 1`] = `
           </li>
         </ul>
       </div>
+      <div
+        data-testid="subFiles"
+      />
     </div>
   </div>
 </DocumentFragment>

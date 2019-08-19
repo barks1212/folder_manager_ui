@@ -4,6 +4,7 @@ exports[`folder should render 1`] = `
 <DocumentFragment>
   <div
     class="Folder"
+    data-testid="folderWrapper"
   >
     <ul>
       <li
@@ -18,5 +19,8 @@ exports[`folder should render 1`] = `
       </li>
     </ul>
   </div>
+  <div
+    data-testid="subFiles"
+  />
 </DocumentFragment>
 `;
