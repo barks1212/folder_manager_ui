@@ -2,13 +2,19 @@
 
 exports[`folder should render 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="Folder"
+  >
     <ul>
-      <li>
-        folder
+      <li
+        class="Name"
+      >
+        test
       </li>
       <li>
-        test
+        <i
+          class="fa fa-chevron-down Chev"
+        />
       </li>
     </ul>
   </div>

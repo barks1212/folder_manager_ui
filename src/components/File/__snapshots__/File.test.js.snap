@@ -2,12 +2,16 @@
 
 exports[`file should render 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="File"
+  >
     <ul>
       <li>
         pdf
       </li>
-      <li>
+      <li
+        class="Name"
+      >
         test
       </li>
       <li>

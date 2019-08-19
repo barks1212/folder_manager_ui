@@ -2,16 +2,22 @@
 
 exports[`folderList should render 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="FolderList"
+  >
     <div
       data-testid="file"
     >
-      <div>
+      <div
+        class="File"
+      >
         <ul>
           <li>
             pdf
           </li>
-          <li>
+          <li
+            class="Name"
+          >
             Employee Handbook
           </li>
           <li>
@@ -23,12 +29,16 @@ exports[`folderList should render 1`] = `
     <div
       data-testid="file"
     >
-      <div>
+      <div
+        class="File"
+      >
         <ul>
           <li>
             pdf
           </li>
-          <li>
+          <li
+            class="Name"
+          >
             Public Holiday policy
           </li>
           <li>
@@ -40,13 +50,19 @@ exports[`folderList should render 1`] = `
     <div
       data-testid="folder"
     >
-      <div>
+      <div
+        class="Folder"
+      >
         <ul>
-          <li>
-            folder
+          <li
+            class="Name"
+          >
+            Expenses
           </li>
           <li>
-            Expenses
+            <i
+              class="fa fa-chevron-down Chev"
+            />
           </li>
         </ul>
       </div>
@@ -54,12 +70,16 @@ exports[`folderList should render 1`] = `
     <div
       data-testid="file"
     >
-      <div>
+      <div
+        class="File"
+      >
         <ul>
           <li>
             csv
           </li>
-          <li>
+          <li
+            class="Name"
+          >
             Cost centres
           </li>
           <li>
@@ -71,13 +91,19 @@ exports[`folderList should render 1`] = `
     <div
       data-testid="folder"
     >
-      <div>
+      <div
+        class="Folder"
+      >
         <ul>
-          <li>
-            folder
+          <li
+            class="Name"
+          >
+            Misc
           </li>
           <li>
-            Misc
+            <i
+              class="fa fa-chevron-down Chev"
+            />
           </li>
         </ul>
       </div>

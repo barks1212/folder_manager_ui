@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { folderDataType } from '../../types/types';
+import classes from './FolderList.module.css';
 
 import Folder from '../../components/Folder/Folder';
 import File from '../../components/File/File';
@@ -41,7 +42,7 @@ class FolderList extends Component {
         ));
 
         return (
-            <div>
+            <div className={classes.FolderList}>
                 {renderFileOrFolder}
             </div>
         );

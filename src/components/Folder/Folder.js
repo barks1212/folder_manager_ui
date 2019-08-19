@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import { folderDataType } from '../../types/types';
+import classes from './Folder.module.css';
 
 
 class Folder extends Component {
@@ -16,11 +17,15 @@ class Folder extends Component {
     
     render () {
         const { contents } = this.props;
+        const { open } = this.state
+
+        const chevron = open ? <i className={`fa fa-chevron-up ${classes.Chev}`}></i> : <i className={`fa fa-chevron-down ${classes.Chev}`}></i>
+
         return (
-            <div onClick={(e) => this.openFolderHandler(e)}>
+            <div className={classes.Folder} onClick={(e) => this.openFolderHandler(e)}>
                 <ul>
-                    <li>{contents.type}</li>
-                    <li>{contents.name}</li>
+                    <li className={classes.Name}>{contents.name}</li>
+                    <li>{chevron}</li>
                 </ul>
             </div>
         )

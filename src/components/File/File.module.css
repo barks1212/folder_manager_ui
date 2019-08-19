@@ -1,0 +1,20 @@
+.File {
+    background: yellow;
+    width: 10rem;
+    height: auto;
+    border: 2px dotted black;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.File ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.Name {
+    font-weight: bold;
+}

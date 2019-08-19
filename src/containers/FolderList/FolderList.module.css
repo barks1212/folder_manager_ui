@@ -1,0 +1,8 @@
+.FolderList {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin: auto;
+    width: 50%;
+}
