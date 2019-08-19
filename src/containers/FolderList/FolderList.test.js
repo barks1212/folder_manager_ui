@@ -26,10 +26,10 @@ describe('folderList', () => {
             <FolderList />)
         </Provider>
         );
-        const files = getAllByTestId('file').map(f => f.textContent);
-        const folders = getAllByTestId('folder').map(f => f.textContent);
+        const files = getAllByTestId('file').map(f => f.firstElementChild.firstChild.childNodes[1].textContent);
+        const folders = getAllByTestId('folder').map(f => f.textContent.firstChild.childNodes[1].textContent);
 
-        const filesToMatch = data.filter(el => el.type !== 'file').map(f => f.name);
+        const filesToMatch = data.filter(el => el.type !== 'folder').map(f => f.name);
         const foldersToMatch = data.filter(el => el.type === 'folder').map(f => f.name);
 
         expect(files).toEqual(filesToMatch);
