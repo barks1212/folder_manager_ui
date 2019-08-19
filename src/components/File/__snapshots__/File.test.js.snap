@@ -3,7 +3,17 @@
 exports[`file should render 1`] = `
 <DocumentFragment>
   <div>
-    this is a file
+    <ul>
+      <li>
+        pdf
+      </li>
+      <li>
+        test
+      </li>
+      <li>
+        2017-01-06
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;

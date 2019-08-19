@@ -3,7 +3,14 @@
 exports[`folder should render 1`] = `
 <DocumentFragment>
   <div>
-    this is a folder
+    <ul>
+      <li>
+        folder
+      </li>
+      <li>
+        test
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;

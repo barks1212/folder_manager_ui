@@ -15,9 +15,13 @@ class Folder extends Component {
     };
     
     render () {
+        const { contents } = this.props;
         return (
             <div onClick={(e) => this.openFolderHandler(e)}>
-                this is a folder
+                <ul>
+                    <li>{contents.type}</li>
+                    <li>{contents.name}</li>
+                </ul>
             </div>
         )
     }

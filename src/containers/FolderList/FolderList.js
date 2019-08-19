@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -27,7 +27,17 @@ class FolderList extends Component {
         const { data } = this.props;
 
         const renderFileOrFolder = data.map(contents => (
-            contents.type === 'folder' ? <Folder key={contents.name} contents={contents}/> : <File key={contents.name} contents={contents} />
+            contents.type === 'folder' ?
+             <Fragment>
+                <div data-testid="folder">
+                    <Folder key={contents.name} contents={contents}/>
+                </div>
+            </Fragment> :
+            <Fragment>
+                <div data-testid="file">
+                    <File key={contents.name} contents={contents} />
+                </div>
+            </Fragment>
         ));
 
         return (

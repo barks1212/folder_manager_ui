@@ -3,21 +3,85 @@
 exports[`folderList should render 1`] = `
 <DocumentFragment>
   <div>
-    <p>
-      Employee Handbook
-    </p>
-    <p>
-      Public Holiday policy
-    </p>
-    <p>
-      Expenses
-    </p>
-    <p>
-      Cost centres
-    </p>
-    <p>
-      Misc
-    </p>
+    <div
+      data-testid="file"
+    >
+      <div>
+        <ul>
+          <li>
+            pdf
+          </li>
+          <li>
+            Employee Handbook
+          </li>
+          <li>
+            2017-01-06
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      data-testid="file"
+    >
+      <div>
+        <ul>
+          <li>
+            pdf
+          </li>
+          <li>
+            Public Holiday policy
+          </li>
+          <li>
+            2016-12-06
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      data-testid="folder"
+    >
+      <div>
+        <ul>
+          <li>
+            folder
+          </li>
+          <li>
+            Expenses
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      data-testid="file"
+    >
+      <div>
+        <ul>
+          <li>
+            csv
+          </li>
+          <li>
+            Cost centres
+          </li>
+          <li>
+            2016-08-12
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      data-testid="folder"
+    >
+      <div>
+        <ul>
+          <li>
+            folder
+          </li>
+          <li>
+            Misc
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
