@@ -8,6 +8,19 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case actionTypes.SET_SORT:
+            if (action.sort === 'name') {
+                return {
+                    ...state,
+                    sort: 'name'
+                }
+            }
+            if (action.sort === 'date') {
+                return {
+                    ...state,
+                    sort: 'date'
+                };
+            }
         case actionTypes.SORT_FILES:
             let sortedState;
             if (action.sort === 'name') {

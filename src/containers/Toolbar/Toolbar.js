@@ -8,12 +8,12 @@ import {noop} from '../../utils/utils';
 
 class Toolbar extends Component {
     render() {
-        const { sortFiles } = this.props;
+        const { setSort } = this.props;
 
 
         return (
             <header className={classes.Toolbar}>
-                <select className={classes.Select} defaultValue="Sort By" placeholder="sort by" onChange={(e) => sortFiles(e.target.value)}>
+                <select className={classes.Select} defaultValue="Sort By" placeholder="sort by" onChange={(e) => setSort(e.target.value)}>
                     <option value="Sort By" disabled>Sort by</option>
                     <option value="name">Name</option>
                     <option value="date">Date</option>
@@ -25,15 +25,15 @@ class Toolbar extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    sortFiles: sort => dispatch({type: actionTypes.SORT_FILES, sort: sort})
+    setSort: sort => dispatch({type: actionTypes.SET_SORT, sort: sort})
 });
 
 Toolbar.propTypes = {
-    sortFiles: PropTypes.func
+    setSort: PropTypes.func
 };
 
 Toolbar.defaultProps = {
-    sortFiles: noop
+    setSort: noop
 };
 
 export default connect(null, mapDispatchToProps)(Toolbar);
