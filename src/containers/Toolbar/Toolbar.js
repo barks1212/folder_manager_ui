@@ -9,7 +9,11 @@ class Toolbar extends Component {
     render() {
         return (
             <header className={classes.Toolbar}>
-                some stuff
+                <select className={classes.Select} placeholder="sort by">
+                    <option value="" selected disabled hidden>Sort by</option>
+                    <option value="name">Name</option>
+                    <option value="date">Date</option>
+                </select>
             </header>
         );
     };
