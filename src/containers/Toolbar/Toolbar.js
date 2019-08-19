@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
+import Dropdown from '../../components/Dropdown/Dropdown';
+
 import classes from './Toolbar.module.css';
 import * as actionTypes from '../../store/actions';
 import {noop} from '../../utils/utils';
@@ -10,14 +12,9 @@ class Toolbar extends Component {
     render() {
         const { setSort } = this.props;
 
-
         return (
             <header className={classes.Toolbar}>
-                <select className={classes.Select} defaultValue="Sort By" placeholder="sort by" onChange={(e) => setSort(e.target.value)}>
-                    <option value="Sort By" disabled>Sort by</option>
-                    <option value="name">Name</option>
-                    <option value="added">Date</option>
-                </select>
+                <Dropdown setSort={setSort} />
             </header>
         );
     };

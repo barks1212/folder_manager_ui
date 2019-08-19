@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { folderDataType } from '../../types/types';
 import classes from './File.module.css';
 
 const file = ({ contents }) => (
@@ -16,7 +15,11 @@ const file = ({ contents }) => (
 );
 
 file.propTypes = {
-    contents: PropTypes.shape(folderDataType)
+    contents: PropTypes.shape({
+        type: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        added: PropTypes.string.isRequired,
+    })
 };
 
 export default file;

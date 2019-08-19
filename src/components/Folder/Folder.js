@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 
-import { folderDataType } from '../../types/types';
 import classes from './Folder.module.css';
 
 import File from '../File/File';
@@ -43,8 +42,14 @@ class Folder extends Component {
 
 Folder.propTypes = {
     contents: PropTypes.shape({
-        ...folderDataType,
-        files: PropTypes.arrayOf(folderDataType)
+        type: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        added: PropTypes.string.isRequired,
+        files: PropTypes.arrayOf(PropTypes.shape({
+            type: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        added: PropTypes.string.isRequired,
+        }))
     })
 };
 

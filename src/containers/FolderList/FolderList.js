@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import isEqual from 'lodash.isequal';
 
-import { folderDataType } from '../../types/types';
 import classes from './FolderList.module.css';
 import * as actionTypes from '../../store/actions';
 
@@ -55,8 +54,14 @@ const mapDispatchToProps = dispatch => ({
 
 FolderList.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
-        ...folderDataType,
-        files: PropTypes.arrayOf(folderDataType)
+        type: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        added: PropTypes.string.isRequired,
+        files: PropTypes.arrayOf(PropTypes.shape({
+            type: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            added: PropTypes.string.isRequired,
+        }))
     }))
 };
 

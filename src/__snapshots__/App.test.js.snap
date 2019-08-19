@@ -5,10 +5,7 @@ exports[`App should render 1`] = `
   <header
     class="Toolbar"
   >
-    <select
-      class="Select"
-      placeholder="sort by"
-    >
+    <select>
       <option
         disabled=""
         selected=""

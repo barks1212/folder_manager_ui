@@ -38,7 +38,7 @@ describe('sort functionality', () => {
         expect(firstFolder).toEqual('Expenses');
     });
 
-    it.only('should sort by date when date is selected', () => {
+    it('should sort by date when date is selected', () => {
         const { container, getAllByTestId } = render (
             <Provider store={store}>
                 <App />
