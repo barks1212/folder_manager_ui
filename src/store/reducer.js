@@ -31,6 +31,10 @@ const reducer = (state = initialState, action) => {
                     if (a.name > b.name) return 1;
                     return 0;
                 });
+                return {
+                    ...state,
+                    folderData: sortedState
+                };
             };
             if (action.sort === 'date') {
                 sortedState = folderData.sort((a, b) => {
