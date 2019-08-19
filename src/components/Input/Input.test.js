@@ -18,7 +18,7 @@ describe('input', () => {
         const {container} = render(<Input filterFiles={filterFilesMock} />);
         const input = container.querySelector('input');
 
-        expect(input.value).toBe('Filename...');
+        expect(input.placeholder).toBe('Filename...');
     });
 
     it('should change value on user input', () => {

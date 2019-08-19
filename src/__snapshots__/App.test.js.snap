@@ -24,6 +24,16 @@ exports[`App should render 1`] = `
         Date
       </option>
     </select>
+    <div
+      class="InputWrapper"
+    >
+      <i
+        class="fa fa-search"
+      />
+      <input
+        placeholder="Filename..."
+      />
+    </div>
   </header>
   <main
     class="Content"

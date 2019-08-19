@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 import Dropdown from '../../components/Dropdown/Dropdown';
+import Input from '../../components/Input/Input';
 
 import classes from './Toolbar.module.css';
 import * as actionTypes from '../../store/actions';
@@ -15,6 +16,7 @@ class Toolbar extends Component {
         return (
             <header className={classes.Toolbar}>
                 <Dropdown setSort={setSort} />
+                <Input filterFiles={noop} />
             </header>
         );
     };
