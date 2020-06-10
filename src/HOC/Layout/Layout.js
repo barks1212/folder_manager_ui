@@ -5,7 +5,7 @@ import classes from './Layout.module.css';
 
 const layout = ({ children }) => (  
     <Fragment>
-        <Toolbar />
+        <Toolbar/>
         <main className={classes.Content}>{children}</main>
     </Fragment>
 );
